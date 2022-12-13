@@ -1,6 +1,6 @@
 # Environment for simulating the AWAKE Run 2 Electron Transfer Line
 
-For a full description of this code and the results see [here](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.101602).
+For a full description of this code and the results, see [here](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.101602).
 
 Code for designing, optimising and simulating a 150 MeV electron beamline. Simulation includes real-world
 effects such as beam scattering within materials, magnet imperfections, element/beam misalignments, finite detector
@@ -9,7 +9,7 @@ resolutions, realistic beamline set-up procedures.
 The simulation code MAD-X was used to model the beam transport, with the bunch tracking simulated using PTC (polymorphic tracking code).
 The scattering foil was modelled using Multiple Coulomb Scattering in Python.
 Errors were added using Monte-Carlo methods, sampling from Gaussian distributions. 
-Encoded constraints include the tunnel width, the placement of plasma cells, the alignment of the laser lines. 
+Encoded constraints include the tunnel width, the placement of plasma cells, the alignment of the laser lines, permitting no beam loss. 
 
 There is functionality to perform both single and multiobjective design optimisation.
 Use the flag [pyMOO](https://pymoo.org/) to use genetic algorithms. 
@@ -22,8 +22,8 @@ For the pseudo-code for these algorithms see Appendix of this [paper](https://jo
 * Top-level script: `runOpt.py`.
 * Optimisation environment: `optEnv.py`.
 * Multi-objective optimisation environment: `MO_env.py`.
-* Error study framework: `errorOptEnv.py`.
-* Beam tracking functionality: `get_beam_size.py`.
+* Error-study framework: `errorOptEnv.py`.
+* Beam-tracking functionality: `get_beam_size.py`.
 * Plotting scripts: `plot_save_output.py`.
 * Add static errors: `add_errors.madx`.
 * Add dynamic errors: `add_errors_jitt.madx`.
@@ -31,8 +31,8 @@ For the pseudo-code for these algorithms see Appendix of this [paper](https://jo
 
 
 ## Optimiser:
-* Enter the details of the parameters you want to optimise into x (in runOpt)
-* The objective function is under step in OptEnv
+* Enter the details of the parameters you want to optimise into `x` (in runOpt)
+* The objective function is under the method `step` in OptEnv
 * Most of the optimiser parameters are set under runOpt e.g number of particles to track, solver to use, width of foil at beam waist
 
 ## ErrorEnv allows for alignment and steering simulations:
@@ -51,7 +51,7 @@ For the pseudo-code for these algorithms see Appendix of this [paper](https://jo
 	* zeroCorr - zero all correctors
 	* read_bpms
 
-## Plotting
+## Plotting methods
 * Phase vs s (plot.phase())
 * Beam distributions (plotmat)
 * Heatmap of beam size vs s for varying parameters (heatmap)
