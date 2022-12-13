@@ -1,7 +1,16 @@
 # Environment for studying the AWAKE Run 2 Electon Transfer Line
 
+Code for designing and optimising a 150 MeV electron beamline, including real world
+effects such as scattering within materials, magnet imperfections, misalignments, finite detector
+resolutions, realistic set-up procedures. 
+
+The simulation code MAD-X was used to model the beam transport, with the bunch tracking simulated using PTC (polymorphic tracking code).
+The scattering foil was modelled using Multiple Coulomb Scattering in Python.
+Errors were added using Monte-Carlo methods, sampling from a Gaussian distribution. 
+Encoded constraints include the tunnel width, the placement of plasma cells, the alignment of the laser lines. 
+
 ### Functionality for optimisation, plotting, error studies, steering, etc. 
-* For the pseudo-code for this algorithm see Appendix of this [paper](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.101602).
+* For the pseudo-code for these algorithms see Appendix of this [paper](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.101602).
 * Beamline sequence and model under `general_tt43_python.madx`.
 
 ## Optimiser:
