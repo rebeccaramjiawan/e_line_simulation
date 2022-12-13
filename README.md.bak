@@ -14,6 +14,8 @@ Encoded constraints include the tunnel width, the placement of plasma cells, the
 There is functionality to perform both single and multiobjective design optimisation.
 Use the flag (pyMOO)[https://pymoo.org/] to use genetic algorithms. 
 
+Top-level script: `runOpt.py`.
+
 ### Functionality for optimisation, plotting, error studies, steering, etc. 
 * For the pseudo-code for these algorithms see Appendix of this [paper](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.101602).
 * Beamline sequence and model under `general_tt43_python.madx`.

@@ -138,3 +138,4 @@ dmypy.json
 data/
 distr/
 internal_mag_pot.txt
+.bak

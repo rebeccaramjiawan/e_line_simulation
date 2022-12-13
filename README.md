@@ -1,4 +1,4 @@
-# Environment for studying the AWAKE Run 2 Electon Transfer Line
+# Environment for simulating the AWAKE Run 2 Electon Transfer Line
 
 For a full description of this code and the results see (here)[paper](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.101602).
 
